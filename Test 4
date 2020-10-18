@@ -1,0 +1,14 @@
+public class FactorialTail {
+	public static void main(String[] args) {
+		long result = factorial(1000000);
+		System.out.println(result);
+
+	}
+	public static int factorial(int n) {
+		int fac=1;
+		for(int i = n;i>0;i--) {
+			fac *= i;
+		}
+		return fac;
+	}
+}
