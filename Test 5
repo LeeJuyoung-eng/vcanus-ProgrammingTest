@@ -1,0 +1,28 @@
+public class DigitalPond {
+	public static void main(String[] args) {
+	int[][] digipond =  {
+							{0,0,0,0,0,0,0,0,0,0},
+							{0,0,0,0,1,0,0,0,0,0},
+							{0,0,0,1,1,1,0,0,0,0},
+							{0,1,1,1,1,1,1,0,0,0},
+							{0,1,1,1,1,1,1,1,1,0},
+							{0,1,1,1,1,1,1,1,1,0},
+							{0,0,1,1,1,1,1,1,0,0},
+							{0,0,0,1,1,1,1,0,0,0},
+							{0,0,0,0,1,0,0,0,0,0},
+							{0,0,0,0,0,0,0,0,0,0}
+						};
+		for(int i=0;i<digipond.length;i++) {
+			for(int j=0;j<digipond[i].length;j++) {
+				if(digipond[i][j]>=1) {
+					if(digipond[i][j-1]>=digipond[i][j] && digipond[i-1][j]>=digipond[i][j] && digipond[i][j+1]>=digipond[i][j] && digipond[i][j]>=digipond[i][j]) {
+					//if(digipond[3][3]==digipond[3][4] && digipond[2][4]==digipond[3][4] && digipond[3][5]==digipond[3][4] && digipond[4][4]==digipond[3][4]) {
+						digipond[i][j] = digipond[i][j]+1;
+					}
+				}
+				System.out.printf("% d",digipond[i][j]);
+			}
+			System.out.println();
+		}
+	}
+}
