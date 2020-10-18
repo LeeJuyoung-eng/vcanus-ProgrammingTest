@@ -1,0 +1,18 @@
+public class Calculator {
+    private int number;
+
+
+	public Calculator add(int number) {
+		this.number=this.number + number;
+		return this;
+	}
+	public Calculator subtract(int number) {
+		this.number=this.number - number;
+		return this;
+	}
+	public int out() {
+		return number;
+	}
+
+
+}
