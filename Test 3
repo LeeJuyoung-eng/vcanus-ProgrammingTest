@@ -1,0 +1,14 @@
+public class Factorial {
+
+	public static void main(String[] args) {
+		long result = factorial(4);
+		System.out.println(result);
+
+	}
+	public static long factorial(long n) {
+		if (n <= 1)
+			return n;
+		else 
+			return factorial(n-1) * n;
+	}
+}
